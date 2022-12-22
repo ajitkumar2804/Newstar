@@ -17,7 +17,7 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <a className="nav-link active" href="fav">Favourite Article</a>
                             </li>
-                        </ul> 
+                        </ul>
                     </div>
                     <button className='btn'>Login</button>
                     <button className='btn'>Signup</button>

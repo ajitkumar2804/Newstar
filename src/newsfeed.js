@@ -16,20 +16,19 @@ export default function Newsfeed() {
 
     useEffect(() => {
         getNewsData();
-    },[])
+    }, [])
     if (loaded) {
         console.log(news.articles)
         return (
-            
+
             <div className='newscard'>
                 {
                     news.articles.map(item =>
-                        <div  key={item.source.id} className="card" style={{width:'18rem'}} >
-                            <img className="card-img-top" src={item.urlToImage}  alt="Card image cap" />
+                        <div key={item.source.publishedAt} className="card" style={{ width: '15rem' }} >
+                            <img className="card-img-top" src={item.urlToImage} alt="Card image cap" />
                             <div className="card-body">
-                                <h5 className="card-title">{item.title}</h5>
-                                <p className="card-text">{item.description}</p>
-                                <a href={item.url} className="btn btn-primary">Read more</a>
+                                <p className="card-title">{item.title}</p>
+                                <a href={item.url} target='_blank' className="">Read more</a>
                             </div>
                         </div>
                     )
