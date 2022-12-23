@@ -21,18 +21,25 @@ export default function Newsfeed() {
         console.log(news.articles)
         return (
 
-            <div className='newscard'>
+            <div className='newscard container-fluid'>
+                <div className='row'>
+                   
                 {
+                    
                     news.articles.map(item =>
-                        <div key={item.source.publishedAt} className="card" style={{ width: '15rem' }} >
-                            <img className="card-img-top" src={item.urlToImage} alt="Card image cap" />
+                        <div className="col-md-3">
+                        <div key={item.source.publishedAt} className="card" >
+                            <img className="card-img-top" src={item.urlToImage} alt="No image" />
                             <div className="card-body">
                                 <p className="card-title">{item.title}</p>
-                                <a href={item.url} target='_blank' className="">Read more</a>
+                                <a href={item.url} target='_blank' className="read">Read more</a>
                             </div>
+                        </div>
                         </div>
                     )
                 }
+                </div>
+                
             </div>
         )
     }

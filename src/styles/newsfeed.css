@@ -1,18 +1,16 @@
 .newscard{
-   display: flex;
-   flex-wrap: wrap;
-   width: fit-content;
 
 }
 .card{
-    height: 20vw;
-    margin: 20px;
+    height: min-content;
+    margin: 10px;
 }
 .card-img-top {
     width: 100%;
     height: 10vw;
     object-fit: cover;
 }
-.btn{
+.read{
+    position: absolute;
     bottom: 1px;
 }
