@@ -29,10 +29,10 @@ export default function Newsfeed() {
                     news.articles.map(item =>
                         <div className="col-md-3">
                         <div key={item.source.publishedAt} className="card" >
-                            <img className="card-img-top" src={item.urlToImage} alt="No image" />
+                            <img className="card-img-top" src={item.urlToImage} alt="Not Avaliable" />
                             <div className="card-body">
                                 <p className="card-title">{item.title}</p>
-                                <a href={item.url} target='_blank' className="read">Read more</a>
+                                <a href={item.url}  rel="noreferrer" target='_blank' className="read">Read more</a>
                             </div>
                         </div>
                         </div>

@@ -1,28 +1,33 @@
-import '../styles/navbar.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
-export default function Navbar() {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="null">Newstar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>       
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="home" href="home">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="fav">Favourite Article</a>
-                            </li>
-                        </ul>
-                    </div>
-                    {/* <button className='btn'>Login</button>
-                    <button className='btn'>Signup</button> */}
-                </div>
-            </nav>
-        </div>
+
+export default function Header() {
+  return (
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand  >NewsStar </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                        <Nav.Link > <Link to='/' className='text-white text-decoration-none'>Home</Link></Nav.Link>
+                            <Nav.Link ><Link to='/Globalnews' className='text-white text-decoration-none'>GlobalNews</Link></Nav.Link>
+                            <Nav.Link ></Nav.Link>
+                        </Nav>
+                        <Nav>
+                            <Nav.Link><Link to='/login' className='text-white text-decoration-none'> Login</Link></Nav.Link>
+                            <Nav.Link eventKey={2} >
+                                <Link to='/Signup' className='text-white text-decoration-none'>Signup</Link>
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+
+
+        
     )
 }

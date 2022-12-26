@@ -1,15 +1,20 @@
 import './App.css';
-import Navbar from '../src/Components/Navbar'
-import Newsfeed from './newsfeed';
-import Categories from './Components/categories';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from '../src/Components/Navbar';
+import Login from './Components/Login';
+import Home from './Components/Home';
+import Signup from './Components/signup';
 function App() {
   return (
     <div>
-      <Navbar />
-      <div className='side'>
-        <Categories />
-        <Newsfeed />
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/Signup' element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
