@@ -1,5 +1,5 @@
-import Newsfeed from '../newsfeed'
 import '../styles/homepage.css'
+import  Newsfeed from '../Components/newsfeed'
 // import Sidebar from './sidebar'
 
 

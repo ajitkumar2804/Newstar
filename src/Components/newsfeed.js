@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../src/styles/newsfeed.css'
+import '../styles/newsfeed.css'
 
 
 export default function Newsfeed() {
@@ -28,9 +28,9 @@ export default function Newsfeed() {
                     
                     news.articles.map(item =>
                         <div className="col-md-3">
-                        <div key={item.source.publishedAt} className="card border-0 h-100" >
+                        <div key={item.source.publishedAt} className="card border-0 h-100 " >
                             <img className="card-img-top" src={item.urlToImage} alt="Not Avaliable" />
-                            <div className="card-body">
+                            <div className="card-body special  ">
                                 <p className="card-title">{item.title}</p>
                                 <a href={item.url}  rel="noreferrer" target='_blank' className="read">Read more</a>
                             </div>

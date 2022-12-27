@@ -1,5 +1,5 @@
 .newscard{
-
+ 
 }
 .card{
     margin: 10px;
@@ -13,3 +13,6 @@
     position: absolute;
     bottom: 1px;
 }
+/* .special{
+  background-image: url('../logos/bg.png');
+} */
