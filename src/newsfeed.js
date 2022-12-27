@@ -22,13 +22,13 @@ export default function Newsfeed() {
         return (
 
             <div className='newscard container-fluid'>
-                <div className='row'>
+                <div className='row gy-4'>
                    
                 {
                     
                     news.articles.map(item =>
                         <div className="col-md-3">
-                        <div key={item.source.publishedAt} className="card" >
+                        <div key={item.source.publishedAt} className="card border-0 h-100" >
                             <img className="card-img-top" src={item.urlToImage} alt="Not Avaliable" />
                             <div className="card-body">
                                 <p className="card-title">{item.title}</p>
