@@ -8,7 +8,7 @@ export default function Newsfeed() {
     const [loaded, setLoaded] = useState(false);
 
     const getNewsData = async () => {
-        await axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=f67f2c7afa394e38a83ffdcd6d7bb7a0`)
+        await axios.get(`https://newstar-backend.onrender.com/news/india`)
             .then(res => res.data)
             .then(data => setNews(data))
         setLoaded(true)
