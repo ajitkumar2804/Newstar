@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link  } from 'react-router-dom';
 
 
@@ -15,18 +14,9 @@ export default function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link > <Link to='/' className='text-white text-decoration-none'>Home</Link></Nav.Link>
-                        <NavDropdown title="Categories" id="basic-nav-dropdown">
-                            <NavDropdown.Item><Link to='/business'>Business</Link></NavDropdown.Item>
-                            <NavDropdown.Item >
-                               <Link to='/health'>Health</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item>
-                                <Link to='/science'>Science</Link>
-                                </NavDropdown.Item>
-                            <NavDropdown.Item>
-                                <Link to='/sports'>Sports</Link>
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link > <Link to='/health' className='text-white text-decoration-none'>Health</Link></Nav.Link>
+                        <Nav.Link > <Link to='/science' className='text-white text-decoration-none'>Science</Link></Nav.Link>
+                        <Nav.Link > <Link to='/sports' className='text-white text-decoration-none'>Sports</Link></Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link><Link to='/login' className='text-white text-decoration-none'> Login</Link></Nav.Link>
