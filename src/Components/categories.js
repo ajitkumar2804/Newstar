@@ -27,15 +27,18 @@ export default function Categoriees(props) {
                     {
 
                         news.sources.map(item =>
-                            <div className="col-md-3">
-                                <div key={item.country} className="card border-0 h-100" >
-                                    <img className="card-img-top" src={item.url} alt="Not Avaliable" />
-                                    <div className="card-body">
-                                        <p className="card-title">{item.description}</p>
-                                        <a href={item.url} rel="noreferrer" target='_blank' className="read">Read more</a>
-                                    </div>
-                                </div>
+                            <div class="card ">
+                            
+                            <div class="card-header">
+                                {item.country}
                             </div>
+                            <img src={item.url} alt=' ' className='card-img-top'/>
+                            <div class="card-body">
+                                <h5 class="card-title">{item.description}</h5>
+                                <p class="card-text">{item.content}</p>
+                                <a href={item.url}  rel="noreferrer" target='_blank' class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
                         )
                     }
                 </div>
