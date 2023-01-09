@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/newsfeed.css'
+import Spinner from './Spinner'
 
 
 export default function Newsfeed() {
@@ -42,6 +43,12 @@ export default function Newsfeed() {
 
                 }
 
+            </div>
+        )
+    }else{
+        return(
+            <div className='text-center'>
+                <Spinner/>
             </div>
         )
     }

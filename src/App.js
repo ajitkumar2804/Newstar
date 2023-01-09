@@ -4,7 +4,7 @@ import Header from '../src/Components/Navbar';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import Signup from './Components/signup';
-import Footer from './Components/footer';
+
 import Categoriees from './Components/categories';
 function App() {
   return (
@@ -20,8 +20,9 @@ function App() {
           <Route path='/science' element={<Categoriees cat='science'/>}/>
           <Route path='/sports' element={<Categoriees cat='sports'/>}/>
         </Routes>
-        <Footer/>
+        
       </BrowserRouter>
+
     </div>
   );
 }
