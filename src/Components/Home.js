@@ -5,8 +5,7 @@ import  Newsfeed from '../Components/newsfeed'
 
 export default function Homepage(){
    return(
-    <div >
-   
+    <div>
     <Newsfeed/>
     </div>
    )

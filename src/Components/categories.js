@@ -9,7 +9,7 @@ export default function Categoriees(props) {
 
     useEffect(() => {
         const getNews = async () => {
-            await axios.get(`https://newsapi.org/v2/top-headlines/sources?category=${props.cat}&apiKey=f67f2c7afa394e38a83ffdcd6d7bb7a0`)
+            await axios.get(`https://newsapi.org/v2/top-headlines/sources?category=${props.cat}&apiKey=f67f2c7afa394e38a83ffdcd6d7bb7`)
                 .then(res => res.data)
                 .then(data => setNews(data))
             setLoaded(true)
@@ -18,7 +18,7 @@ export default function Categoriees(props) {
     },[props.cat])
 
     if (loaded) {
-        console.log(news.sources)
+        console.log('News Data Loaded Succesfully')
         return (
             
             <div className='newscard container-fluid'>

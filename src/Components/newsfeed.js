@@ -19,8 +19,8 @@ export default function Newsfeed() {
         getNewsData();
     }, [])
     if (loaded) {
-        // console.log('News Data Loaded Succesfully')
-        console.log(news.articles)
+         console.log('News Data Loaded Succesfully')
+        //console.log(news.articles)
         return (
             <div className='col-md-6 news '>
                 <h1 className='text-center m-3'>Top Headlines</h1>
